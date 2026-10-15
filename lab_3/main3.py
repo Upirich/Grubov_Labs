@@ -131,5 +131,3 @@ def task12():
     print(count_above_average(sp))
     print(find_value(sp, 0))
     x, y, z = analyze_measurements(sp)
-
-task12()
