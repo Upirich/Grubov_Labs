@@ -1,4 +1,7 @@
-class Vehicle:
+from abc import ABC, abstractmethod
+
+
+class Vehicle(ABC):
     
     def __init__(self, brand, model, year):
         self.brand = brand
@@ -19,7 +22,7 @@ class Vehicle:
         self.speed = 0
 
     def get_info(self):
-        print(self.speed)
+        return (self.brand, self.model, self.year)
 
     @property
     def speed(self):
@@ -34,5 +37,7 @@ class Vehicle:
     def __str__(self):
         return(f'Транспорт: {self.brand}, модели: {self.model}, {self.year} года производства. Скорость в данный момент: {self.speed}')
     
-    
+    @abstractmethod
+    def move(self):
+        pass
     
